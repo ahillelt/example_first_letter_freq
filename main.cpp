@@ -28,13 +28,12 @@ vector<string> get_sentence() {
 	cout << "To indicate the end of the input, enter an empty line." << endl;
 
 	word = "";
-	do {
 
+	while (getline(cin, word) && !word.empty()) {
 		if (!word.empty()) {
 			words.push_back(word);
 		}
-
-	} while (getline(cin, word) && !word.empty());
+	}
 
 	return words;
 }
